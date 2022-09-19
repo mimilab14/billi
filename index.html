@@ -1,0 +1,21 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>料金計算サイト</title>
+ <link rel="stylesheet" href="calc.css" type="text/css"/>
+</head>
+<body>
+ <h2>料金計算サイト</h2>
+ <form oninput="total.value=Math.round((status.value*Math.ceil((time.value-4)/30)+Number(drink.value))*1.1)">
+ <select name="status">
+ <option value="300">男性・一般</option>
+ <option value="250">男性・メンバー</option>
+ <option value="200">女性</option>
+ </select><br>
+ <input type="number" name="time" value="" placeholder="利用時間（分）"><br>
+ <input type="number" name="drink" value="" placeholder="ドリンク料金"><br>
+ 料金（税込）：¥<output name="total"><br><br>
+ </form>
+ <a href='https://mimilab14.github.io/billi/calc.html'>34分以下の場合はこちら</a>
+</body>
+</html>
